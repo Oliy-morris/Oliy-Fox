@@ -1,0 +1,48 @@
+body{ 
+  background-color:rgb(168, 65, 9) ;
+  text-align: center;
+}
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 2;
+      }
+
+   
+
+    .div1 {
+      height: 110px;
+      width: 40%;
+      background-color:black;
+      text-align: center;
+    }
+
+     div{ font-family: "Times New Roman", Times, serif;
+     height: 110px;
+     width: 40%;
+     background-color:rgb(165, 0, 0);
+    }
+
+
+    h1, h2, p  {
+      text-align: center;
+      color: rgba(12, 115, 4, 0.738);
+    }
+ 
+
+.p1{
+  color:rgb(0, 93, 252);
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
