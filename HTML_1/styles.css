@@ -1,40 +1,147 @@
-body{ 
+/* body {  
   background-color:rgb(168, 65, 9) ;
-  text-align: center;
-}
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+   padding: 0;
+   }
     ul {
         list-style-type: none;
         margin: 0;
         padding: 2;
-      }
+       }
+ 
+   header  { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px;
+    z-index: 1000;
+   }  
+   nav {
+    margin-top: 10px;
 
-   
+   }
+
+   nav ul{ 
+   list-style-type: none;
+   display: flex;
+   justify-content: center;
+   padding: 0;
+   }
+   nav ul li { 
+    text-decoration: ;
+   }
 
     .div1 {
-      height: 110px;
-      width: 40%;
-      background-color:black;
+      border: 1px solid black;
+      width: 300px ;
+      margin: 0 auto 0 auto;
       text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: black;
     }
 
-     div{ font-family: "Times New Roman", Times, serif;
-     height: 110px;
-     width: 40%;
-     background-color:rgb(165, 0, 0);
-    }
-
-
-    h1, h2, p  {
+     div{ 
+      border: 1px solid black;
+      width: 300px ;
+      margin: 0 auto 0 auto;
       text-align: center;
-      color: rgba(12, 115, 4, 0.738);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: black;
+       
     }
+
+
+    h1, h2, main { 
+    text-align: center;
+    color: rgb(39, 190, 28);
+    } */
+    /* Reset margin and padding for consistent styling */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+body{ background-color:rgb(168, 65, 9) ;
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+/* Ensure header is at the top and spans full width */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Change to your preferred background color */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Style the navigation menu */
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333; /* Change to your preferred link color */
+  font-size: 16px;
+}
+
+/* Ensure the main content starts below the fixed header */
+main {
+  padding-top: 80px; /* Adjust based on the header height */
+  font-family: Arial, sans-serif;
+}
+
+main p {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%; /* Ensures images are responsive */
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+/* Style for the first div */
+.div1 {
+  background-color: #f9f9f9; /* Background color for distinction */
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* Style for the footer */
+footer {
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
  
 
-.p1{
-  color:rgb(0, 93, 252);
-  text-align: center;
-
-}
+ 
 
 
 
