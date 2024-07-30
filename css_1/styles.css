@@ -50,13 +50,13 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #480a6a; 
+  color: #480a6a; /* Change to your preferred link color */
   font-size: 16px;
 }
 
 
 main {
-  padding-top: 80px;  
+  padding-top: 80px; /* Adjust based on the header height */
   font-family: Arial, sans-serif;
   text-align:center;
   width: 100%;
@@ -75,7 +75,7 @@ img {
 }
 
 .div1 {
-  background-color: #e51a1a;  
+  background-color: #e51a1a; /* Background color for distinction */
   padding: 15px;
   border: 1px solid #000000;
   margin-bottom: 20px; 
