@@ -3,23 +3,32 @@
 <head> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home - Ollie's Archives</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="html" href="ExP.html">
+    <link rel="import" href="ExP.html">
+    <link rel="import" href="Contact.html">
 </head>
   <body>
     <header> 
-    <h1>Welcome to Ollie's Archives</h1>
+    <h1>Ollie's Archives</h1>
      <nav> 
         <ul> 
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Experience's and expression's">Experience's and Expression's</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ExP.html">Experience's and Expression's</a></li>
+            <li><a href="Contact.html">Contact</a></li>
         </ul>
      </nav>
+     <button id="profileButton" class="dropdown-button">O</button>
+        <div id="profileDropdown" class="dropdown-content">
+            <img id="profilePicture" src="" alt="Profile Picture">
+            <p id="username"></p>
+            <p id="email"></p>
+            <p id="favoriteItems"></p>
+        </div>
     </header>
 
     <main> 
+        <p id="greetingMessage"></p> 
         <p> 
          <img src="fox-2.jpeg" alt=" picture of a fox"> 
          This my main content of the page.
@@ -40,14 +49,12 @@
       </div>
     </main>
 
-    <img src=" first painting.jpeg">
+    <img src="first painting.jpeg"alt="first painting">
     <footer> 
-     <p> &copy; 2024 Ollie's Archives|Oliver Morris-kaelin</p>
+     <p> &copy; 2024 Ollie's Archives| Oliver Morris-kaelin</p>
     </footer>
 
-    <div id="greeting-container"> 
-     <h2 id="greeting">Hello, welcome to my site!</h2> 
-    </div>
+     
 
     
     <script src="Portfoilo.js"></script>

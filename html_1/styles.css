@@ -48,7 +48,7 @@ nav ul li {
   margin: 0 15px;
 }
 
-nav ul li a {
+nav ul li a:hover {
   text-decoration: none;
   color: #480a6a; 
   font-size: 16px;
@@ -58,7 +58,7 @@ nav ul li a {
 main {
   padding-top: 80px;  
   font-family: Arial, sans-serif;
-  text-align:center;
+  text-align: center;
   width: 100%;
   max-width: 800px;
 }
@@ -89,7 +89,80 @@ footer {
   text-align: center;
 }
 
+.dropdown-button {
+    background-color: #480a6a;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    text-align: left;
+}
+
+ .dropdown-content img {
+     max-width: 100%;
+     height: auto;
+     border-radius: 50%;
+ }
  
+ .dropdown-content p {
+     margin: 5px 0;
+ }
+ 
+ header:hover .dropdown-content {
+     display: block;
+ }
+
+ /* Ensure the profile button is fixed at the top-left corner */
+#profileButton {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    padding: 10px;
+    background-color: #e51a1a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it’s on top of other content */
+}
+
+/* Style for the profile dropdown */
+#profileDropdown {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50px; /* Position it below the profile button */
+    left: 10px; /* Align it with the profile button */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it’s on top of other content */
+}
+
+/* Additional styling for profile dropdown content */
+#profileDropdown img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#profileDropdown p {
+    margin: 5px 0;
+}
 
  
 
