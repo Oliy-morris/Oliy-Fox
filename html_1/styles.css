@@ -126,33 +126,31 @@ footer {
      display: block;
  }
 
- /* Ensure the profile button is fixed at the top-left corner */
+ 
 #profileButton {
     position: fixed;
-    top: 10px; /* Adjust as needed */
-    left: 10px; /* Adjust as needed */
+    top: 10px;  
+    left: 10px;  
     padding: 10px;
     background-color: #e51a1a;
     color: #fff;
     border: none;
     cursor: pointer;
-    z-index: 1000; /* Ensure it’s on top of other content */
+    z-index: 1000;  
 }
 
-/* Style for the profile dropdown */
 #profileDropdown {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
-    top: 50px; /* Position it below the profile button */
-    left: 10px; /* Align it with the profile button */
+    top: 50px; 
+    left: 10px;  
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensure it’s on top of other content */
+    z-index: 1000;  
 }
-
-/* Additional styling for profile dropdown content */
+ 
 #profileDropdown img {
     max-width: 100px;
     height: auto;
@@ -163,16 +161,3 @@ footer {
 #profileDropdown p {
     margin: 5px 0;
 }
-
- 
-
-
-
-
-
-
-
-
-
-
-

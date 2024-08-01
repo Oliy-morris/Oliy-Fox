@@ -11,12 +11,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const navLinks = ['Home', 'Experiences and Expressions', 'Contact'];
     console.log('Navigation Links:', navLinks);
 
+
     const userProfile = {
         username: 'Ollie',
         email: 'loganllama15@gmail.com',
         isLoggedIn: true,
         profilePicture: 'rose-1.jpg',
-        favoriteItems: ['Painting', 'Drawing', 'writing'],
+        favoriteItems: ['Painting', 'Drawing', 'writing' , 'poetry'],
     };
     console.log('User Profile:', userProfile);
     
