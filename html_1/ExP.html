@@ -23,17 +23,28 @@
 
         <main> 
             <h2>My art</h2>
-            <p> Any and all fantacy stories about these paintings and pottery will come soon i don't have all the stories worked out yet. </p>
-            <img src="Painting-1.jpg" alt="Following tutorial">
-            <img src="Painting-2.jpg" alt="Did this painting over th summer last year">
-            <img src="Pottery-1.jpg" alt="My first handmade pottery">
-            <img src="Pottery-2.jpg" alt="My last pottery lanturn that i did for th schoolyear">
-            <img src="Pottery-3.jpg" alt="Different angle">
-            <img src="Potter-4.jpg" alt="Different angle">
+            <p> 
+              Any and all fantacy stories about these paintings and pottery will come soon i don't have all the stories worked out yet. 
+            </p>
+            
+             <img src="Painting-1.jpg" alt="Following tutorial" class="styled-img">
+             <img src="Painting-2.jpg" alt="Did this painting over th summer last year" class="styled-img">
+             <img src="Pottery-1.jpg" alt="My first handmade pottery" class="styled-img">
+            <div class="carousel">
+                <div class="carousel-inner">
+                 <img src="Pottery-2.jpg" alt="My last pottery lanturn that i did for th schoolyear" class="carousel-item">
+                 <img src="Pottery-3.jpg" alt="Different angle" class="carousel-item">
+                 <img src="Potter-4.jpg" alt="Different angle"class="carousel-item">
+                </div>
+              <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+              <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+            </div>
         </main>
 
     <footer> 
       <p> &copy; 2024 Ollie's Archives|Oliver Morris-Kaelin</p>
     </footer>
+
+    <script src="Portfoilo.js"></script>
 </body>
 </html>
