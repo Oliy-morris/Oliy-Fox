@@ -42,6 +42,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     console.log('User Profile:', userProfile);
+    const totalFavoriteItems = userProfile.favoriteItems.length;
+    const additionalItems = 5;
+    const totalItems = totalFavoriteItems + additionalItems;
+
+    const totalItemsElement = document.createElement('p');
+    totalItemsElement.id = 'totalItems';
+    document.body.appendChild(totalItemsElement);
+
+    const averageFavoriteItems = totalItems / 2; // Assuming 2 as a divisor for example
+    console.log('Average Favorite Items:', averageFavoriteItems);
+
+    const averageItemsElement = document.createElement('p');
+    averageItemsElement.id = 'averageItems';
+    averageItemsElement.textContent = `Average favorite items: ${averageFavoriteItems}`;
+    document.body.appendChild(averageItemsElement);
+    
 });
 
 const profileButton = document.getElementById('profileButton');
@@ -56,7 +72,7 @@ if (profileButton && profileDropdown) {
         }
     });
     
-    // Hide the dropdown if clicked outside
+     
     document.addEventListener('click', (event) => {
         if (!profileButton.contains(event.target) && !profileDropdown.contains(event.target)) {
             profileDropdown.style.display = 'none';
@@ -105,7 +121,6 @@ function prevSlide() {
     showSlide(currentSlide - 1);
 }
 
-// Initial display
 showSlide(currentSlide);
 
 document.querySelector('.next').addEventListener('click', nextSlide);

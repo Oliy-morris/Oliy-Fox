@@ -176,19 +176,23 @@ footer {
 
 .carousel-inner {
     display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
-    box-sizing: border-box;
+ flex:0 0 auto;
+ width: 100px;
+ height: 200px;
+ width: 100%; 
+ box-sizing: border-box;
 }
 .carousel-item img {
     width: 100%;
-    height: auto;
-    max-width: 300px;
-    max-height: 200px;
+    height: 100%;
+    object-fit: cover;
     display: block;
     margin:0 auto;
 }

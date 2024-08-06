@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <header> 
         <h1>Experience's and Expression's</h1>
          <nav> 
@@ -18,8 +19,14 @@
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
          </nav>
+         <button id="profileButton" class="dropdown-button">O</button>
+        <div id="profileDropdown" class="dropdown-content">
+         <img id="profilePicture" alt="Profile Picture" src="rose-1.jpg">
+         <p id="username"></p>
+         <p id="email"></p>
+         <p id="favoriteItems"></p>
+        </div>
         </header>
-
 
         <main> 
             <h2>My art</h2>
@@ -28,13 +35,14 @@
             </p>
             
              <img src="Painting-1.jpg" alt="Following tutorial" class="styled-img">
-             <img src="Painting-2.jpg" alt="Did this painting over th summer last year" class="styled-img">
+             <img src="Painting-2.jpg" alt="Did this painting over the summer last year" class="styled-img">
              <img src="Pottery-1.jpg" alt="My first handmade pottery" class="styled-img">
+
             <div class="carousel">
                 <div class="carousel-inner">
                  <img src="Pottery-2.jpg" alt="My last pottery lanturn that i did for th schoolyear" class="carousel-item">
                  <img src="Pottery-3.jpg" alt="Different angle" class="carousel-item">
-                 <img src="Potter-4.jpg" alt="Different angle"class="carousel-item">
+                 <img src="Pottery-4.jpg" alt="Different angle"class="carousel-item">
                 </div>
               <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
               <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
@@ -46,5 +54,6 @@
     </footer>
 
     <script src="Portfoilo.js"></script>
+
 </body>
 </html>
