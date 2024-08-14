@@ -1,26 +1,24 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    alert('Hello, Welcome to Ollies Archives');
+    // Existing setup for greeting, profile, and dropdown
+    alert('Hello, Welcome to Ollie\'s Archives');
 
-    // Get the greeting element from the DOM
     const greetingElement = document.getElementById('greetingMessage');
     if (greetingElement) {
-        greetingElement.textContent = 'Hello, Welcome to Ollies Archives!';
+        greetingElement.textContent = 'Hello, Welcome to Ollie\'s Archives!';
     }
 
-    // Array data type
     const navLinks = ['Home', 'Experiences and Expressions', 'Contact'];
     console.log('Navigation Links:', navLinks);
-
 
     const userProfile = {
         username: 'Ollie',
         email: 'loganllama15@gmail.com',
         isLoggedIn: true,
         profilePicture: 'rose-1.jpg',
-        favoriteItems: ['Painting', 'Drawing', 'writing' , 'poetry'],
+        favoriteItems: ['Painting', 'Drawing', 'Writing', 'Poetry'],
     };
     console.log('User Profile:', userProfile);
-    
+
     const profilePictureElement = document.getElementById('profilePicture');
     if (profilePictureElement) {
         profilePictureElement.src = userProfile.profilePicture;
@@ -48,80 +46,89 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const totalItemsElement = document.createElement('p');
     totalItemsElement.id = 'totalItems';
+    totalItemsElement.textContent = `Total Items: ${totalItems}`;
     document.body.appendChild(totalItemsElement);
 
-    const averageFavoriteItems = totalItems / 2; // Assuming 2 as a divisor for example
+    const averageFavoriteItems = totalItems / 2; // Example divisor
     console.log('Average Favorite Items:', averageFavoriteItems);
 
     const averageItemsElement = document.createElement('p');
     averageItemsElement.id = 'averageItems';
     averageItemsElement.textContent = `Average favorite items: ${averageFavoriteItems}`;
     document.body.appendChild(averageItemsElement);
-    
-});
 
-const profileButton = document.getElementById('profileButton');
-const profileDropdown = document.getElementById('profileDropdown');
+    // Handle profile button and dropdown
+    const profileButton = document.getElementById('profileButton');
+    const profileDropdown = document.getElementById('profileDropdown');
 
-if (profileButton && profileDropdown) {
-    profileButton.addEventListener('click', () => {
-        if (profileDropdown.style.display === 'block') {
-            profileDropdown.style.display = 'none';
-        } else {
-            profileDropdown.style.display = 'block';
-        }
-    });
-    
-     
-    document.addEventListener('click', (event) => {
-        if (!profileButton.contains(event.target) && !profileDropdown.contains(event.target)) {
-            profileDropdown.style.display = 'none';
-        }
-    });
-}
- 
-const pageTitle = document.querySelector('h2');
-if (pageTitle) {
-    switch (document.title) {
-        case 'Home - Ollie\'s Archives':
-            pageTitle.textContent = 'Home Page Content';
-            break;
-        case 'Experience\'s and Expression\'s - Ollie\'s Archives':
-            pageTitle.textContent = 'Experience\'s and Expression\'s Content';
-            break;
-        case 'Contact - Ollie\'s Archives':
-            pageTitle.textContent = 'Contact Page Content';
-            break;
-        default:
-            pageTitle.textContent = 'Welcome to Ollie\'s Archives';
-            break;
+    if (profileButton && profileDropdown) {
+        profileButton.addEventListener('click', () => {
+            profileDropdown.style.display = profileDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!profileButton.contains(event.target) && !profileDropdown.contains(event.target)) {
+                profileDropdown.style.display = 'none';
+            }
+        });
     }
-}
 
-let currentSlide = 0;
-
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-item');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
+    // Handle page title
+    const pageTitle = document.querySelector('h2');
+    if (pageTitle) {
+        switch (document.title) {
+            case 'Home - Ollie\'s Archives':
+                pageTitle.textContent = 'Home Page Content';
+                break;
+            case 'Experience\'s and Expression\'s - Ollie\'s Archives':
+                pageTitle.textContent = 'Experience\'s and Expression\'s Content';
+                break;
+            case 'Contact - Ollie\'s Archives':
+                pageTitle.textContent = 'Contact Page Content';
+                break;
+            default:
+                pageTitle.textContent = 'Welcome to Ollie\'s Archives';
+                break;
+        }
     }
-    const offset = -currentSlide * 100;
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-}
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
+    // Removed gallery image click handling for enlargement
+    // document.querySelectorAll('.gallery img').forEach(img => {
+    //     img.addEventListener('click', () => {
+    //         if (img.classList.contains('enlarged')) {
+    //             img.classList.remove('enlarged');
+    //             img.style.maxWidth = "100%";
+    //         } else {
+    //             document.querySelectorAll('.gallery img').forEach(img => {
+    //                 img.classList.remove('enlarged');
+    //                 img.style.maxWidth = "100%";
+    //             });
+    //             img.classList.add('enlarged');
+    //             img.style.maxWidth = "80%"; // Adjust as needed
+    //         }
+    //     });
 
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
+        // New JavaScript for gallery thumbnails
+        const thumbnails = document.querySelectorAll('.thumbnail img');
+        const mainImage = document.getElementById('mainImage');
+    
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                // Remove active class from all thumbnails
+                thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                // Add active class to the clicked thumbnail
+                thumbnail.classList.add('active');
+                // Change the main image source to the clicked thumbnail's source
+                mainImage.src = thumbnail.src;
+            });
+        });
+    
+        // Optionally set the first thumbnail as active on load
+        if (thumbnails.length > 0) {
+            thumbnails[0].classList.add('active');
+            mainImage.src = thumbnails[0].src;
+        }
 
-showSlide(currentSlide);
-
-document.querySelector('.next').addEventListener('click', nextSlide);
-    document.querySelector('.prev').addEventListener('click', prevSlide);
+     // Setup each gallery by calling the function with appropriate selectors
+     setupGallery('mainImage1', '.gallery-container:nth-of-type(1) .thumbnail img');
+    });
